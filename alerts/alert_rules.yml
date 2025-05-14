@@ -1,0 +1,10 @@
+groups:
+  - name: macos_alerts
+    rules:
+      - alert: HighCPUUsage
+        expr: cpu_percent > 80
+        for: 1m
+        labels:
+          severity: warning
+        annotations:
+          summary: "High CPU usage detected"
